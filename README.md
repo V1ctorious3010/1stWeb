@@ -3,5 +3,5 @@
 
 ### AI Recommendation Service
 - **Chức năng**: Gợi ý đầu tư dựa trên dữ liệu tài sản và thông tin thị trường.
-- **Công nghệ**: Python, Random Forest (dự đoán lợi nhuận), K-Means (phân loại rủi ro).
+- **Công nghệ**: Python, Random Forest, K-Means.
 - **Quy trình**: Nhận dữ liệu từ Asset Service và Market Data Service, đánh giá khẩu vị rủi ro, sau đó sinh gợi ý phù hợp.
