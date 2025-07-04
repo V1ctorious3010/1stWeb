@@ -34,22 +34,6 @@
 ### Bước 3: Chạy các service
 
 
-## Dữ liệu mẫu
-
-Sau khi chạy script khởi tạo, bạn sẽ có:
-
-### Khách hàng mẫu:
-- **CUST001**: Nguyễn Văn An (Risk: MEDIUM)
-- **CUST002**: Trần Thị Bình (Risk: LOW)
-- **CUST003**: Lê Văn Cường (Risk: HIGH)
-
-### Tài sản mẫu:
-- Tiết kiệm có kỳ hạn
-- Quỹ mở VFMVF1
-- Trái phiếu Chính phủ
-- Cổ phiếu VNM
-- Vàng SJC
-- Bất động sản
 
 ## API Endpoints
 
@@ -92,8 +76,6 @@ Sau khi chạy script khởi tạo, bạn sẽ có:
 - **Caching**: Redis cache
 - **Database**: MongoDB
 
-
-
 ## Development
 
 ### Cấu trúc thư mục
@@ -110,14 +92,6 @@ Sau khi chạy script khởi tạo, bạn sẽ có:
 └── README.md               # Documentation
 ```
 
-### Environment Variables
-Tạo file `.env` trong mỗi service nếu cần:
-```env
-NODE_ENV=development
-MONGODB_URI=mongodb://admin:password123@localhost:27017/dbname?authSource=admin
-REDIS_URL=redis://localhost:6379
-KAFKA_BROKER=localhost:9092
-```
 
 ## Support
 
