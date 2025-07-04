@@ -1,4 +1,4 @@
-# Hướng dẫn Cài đặt và Chạy Hệ thống Quản lý Tài sản
+# Cài đặt và Chạy Hệ thống Quản lý Tài sản
 
 ## Yêu cầu hệ thống
 
