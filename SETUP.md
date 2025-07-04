@@ -9,32 +9,11 @@
 ## Cách 1: Chạy toàn bộ hệ thống bằng Docker (Khuyến nghị)
 
 ### Bước 1: Clone và cài đặt
-```bash
-# Clone repository (nếu chưa có)
-git clone <repository-url>
-cd 1stWeb
-
-# Chạy toàn bộ hệ thống
-docker-compose up -d
-```
 
 ### Bước 2: Kiểm tra các service
-```bash
-# Kiểm tra trạng thái các container
-docker-compose ps
-
-# Xem logs của các service
-docker-compose logs -f
-```
 
 ### Bước 3: Khởi tạo dữ liệu mẫu
-```bash
-# Cài đặt dependencies cho script
-npm install axios
 
-# Chạy script khởi tạo dữ liệu
-node scripts/init-data.js
-```
 
 ### Bước 4: Truy cập ứng dụng
 - **Frontend**: http://localhost:3000
@@ -47,64 +26,13 @@ node scripts/init-data.js
 ## Cách 2: Chạy từng service riêng lẻ
 
 ### Bước 1: Cài đặt dependencies
-```bash
-# Customer Service
-cd customer-service
-npm install
 
-# Asset Service
-cd ../asset-service
-npm install
-
-# Market Data Service
-cd ../market-data-service
-npm install
-
-# API Gateway
-cd ../api-gateway
-npm install
-
-# Frontend
-cd ../frontend
-npm install
-
-# AI Service
-cd ../ai-recommendation-service
-pip install -r requirements.txt
-```
 
 ### Bước 2: Khởi động cơ sở dữ liệu
-```bash
-# Khởi động MongoDB và Redis
-docker-compose up -d mongodb redis kafka zookeeper
-```
+
 
 ### Bước 3: Chạy các service
-```bash
-# Terminal 1 - Customer Service
-cd customer-service
-npm start
 
-# Terminal 2 - Asset Service
-cd asset-service
-npm start
-
-# Terminal 3 - Market Data Service
-cd market-data-service
-npm start
-
-# Terminal 4 - AI Service
-cd ai-recommendation-service
-python app.py
-
-# Terminal 5 - API Gateway
-cd api-gateway
-npm start
-
-# Terminal 6 - Frontend
-cd frontend
-npm start
-```
 
 ## Dữ liệu mẫu
 
@@ -164,61 +92,7 @@ Sau khi chạy script khởi tạo, bạn sẽ có:
 - **Caching**: Redis cache
 - **Database**: MongoDB
 
-## Troubleshooting
 
-### Lỗi thường gặp:
-
-1. **Port đã được sử dụng**
-   ```bash
-   # Kiểm tra port đang sử dụng
-   netstat -tulpn | grep :8000
-   
-   # Dừng service đang sử dụng port
-   sudo kill -9 <PID>
-   ```
-
-2. **Docker không khởi động được**
-   ```bash
-   # Xóa container cũ
-   docker-compose down -v
-   
-   # Khởi động lại
-   docker-compose up -d
-   ```
-
-3. **AI Service lỗi**
-   ```bash
-   # Kiểm tra Python version
-   python --version
-   
-   # Cài đặt lại dependencies
-   pip install -r requirements.txt
-   ```
-
-4. **Frontend không load được**
-   ```bash
-   # Xóa node_modules và cài lại
-   rm -rf node_modules package-lock.json
-   npm install
-   ```
-
-## Monitoring
-
-### Health Checks
-- API Gateway: http://localhost:8000/health
-- Customer Service: http://localhost:8001/health
-- Asset Service: http://localhost:8002/health
-- Market Data Service: http://localhost:8003/health
-- AI Service: http://localhost:8004/health
-
-### Logs
-```bash
-# Xem logs của tất cả service
-docker-compose logs -f
-
-# Xem logs của service cụ thể
-docker-compose logs -f customer-service
-```
 
 ## Development
 
