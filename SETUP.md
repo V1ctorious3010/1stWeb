@@ -93,10 +93,4 @@
 ```
 
 
-## Support
 
-Nếu gặp vấn đề, vui lòng:
-1. Kiểm tra logs của service
-2. Đảm bảo tất cả dependencies đã được cài đặt
-3. Kiểm tra kết nối database và Redis
-4. Xem hướng dẫn troubleshooting ở trên 
